@@ -9,6 +9,16 @@ def main():
       bukv = str.isnumeric(kolvo_krit)
   kolvo_krit = int(kolvo_krit)
 
+  while kolvo_krit == 0:
+    kolvo_krit = input("Введите число большее или равное 1(цифрами): ")
+    bukv = kolvo_krit.isdigit()
+    if bukv == False:  # проверка на буквы
+      while bukv == False:
+        print("Введите число большее или равное 1(цифрами): ")
+        kolvo_krit = input()
+        bukv = str.isnumeric(kolvo_krit)
+    kolvo_krit = int(kolvo_krit)
+
   mas = [[0 for j in range(kolvo_krit)] for i in range(kolvo_krit)]
   for i in range(kolvo_krit):         #метод анализа иерархий Томаса Саати для одного уровня
     for j in range(kolvo_krit):
