@@ -5,6 +5,7 @@
 ## Рекомендации
 Программу можно открыть в любой среде разработки для Python, написана в PyCharm Community Edition 2021
 # Скриншоты тестов 
-![image]()
-![image]()
+![image](![21312312](https://user-images.githubusercontent.com/49991441/208738363-4cdb20e9-a8d5-49db-af57-1c3a9aa3976b.png)
+![image](![123232](https://user-images.githubusercontent.com/49991441/208738375-d878c7cf-683b-4b9a-a615-f0ab17c0cd7c.png)
+
 
