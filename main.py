@@ -1,5 +1,15 @@
 def main():
-  kolvo_krit = int(input("Введите колличество критериев: "))
+  kolvo_krit = input("Введите колличество критериев: ")
+
+  bukv = kolvo_krit.isdigit()
+  if bukv == False:  # проверка на буквы
+    while bukv == False:
+      print("Введите число большее или равное 1(цифрами): ")
+      kolvo_krit = input()
+      bukv = str.isnumeric(kolvo_krit)
+  kolvo_krit = int(kolvo_krit)
+
+
   mas = [[0 for j in range(kolvo_krit)] for i in range(kolvo_krit)]
   for i in range(kolvo_krit):
     for j in range(kolvo_krit):
@@ -7,7 +17,16 @@ def main():
         mas[i][j] = 1
       elif i < j:
         while True:
-          mas[i][j] = float(input(f"Введите коэфициент сравнения {i+1} к {j+1}(от 0 до 9): "))
+          mas[i][j] = input(f"Введите коэфициент сравнения {i+1} к {j+1}(от 0 до 9): ")
+
+          bukv = mas[i][j].isdigit()
+          if bukv == False:  # проверка на буквы
+            while bukv == False:
+              print("Введите число от 1 до 9(цифрами): ")
+              mas[i][j] = input()
+              bukv = str.isnumeric(mas[i][j])
+          mas[i][j] = int(mas[i][j])
+
           if mas[i][j] > 9 or mas[i][j] <= 0:
             print("Недопустимое значение, попробуйте ещё раз\n")
           else:
