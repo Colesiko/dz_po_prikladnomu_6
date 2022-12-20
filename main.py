@@ -9,9 +9,8 @@ def main():
       bukv = str.isnumeric(kolvo_krit)
   kolvo_krit = int(kolvo_krit)
 
-
   mas = [[0 for j in range(kolvo_krit)] for i in range(kolvo_krit)]
-  for i in range(kolvo_krit):
+  for i in range(kolvo_krit):         #метод анализа иерархий Томаса Саати для одного уровня
     for j in range(kolvo_krit):
       if i == j:
         mas[i][j] = 1
@@ -38,7 +37,7 @@ def main():
 
   ves = []
   sum = 0
-  print("Итоговая матрица:")
+  print("Итоговая матрица:")      #вывод матрицы
   for i in range(kolvo_krit):
     for j in range(kolvo_krit):
       print(f"{mas[i][j]:.2f}  ", end="")
